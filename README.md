@@ -1,7 +1,7 @@
-# Data Structures
+# Data Structures<br />
 
-Data Structures Implementations:
-1-Stacks
-2-Queues
-3-Hash Tables
-4-Linked Lists
+Data Structures Implementations:<br />
+1-Stacks<br />
+2-Queues<br />
+3-Hash Tables<br />
+4-Linked Lists<br />
