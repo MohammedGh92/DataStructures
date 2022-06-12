@@ -1,19 +1,14 @@
-﻿using System;
-using DataStructures.LinkedList;
-
-namespace DataStructures
+﻿namespace DataStructures
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Queue<int> queue = new Queue<int>();
-            queue.Enqueue(1);
-            queue.Enqueue(2);
-            queue.Enqueue(3);
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
+            int[] newArr = new int[] { 5, 1, 2, 3, 4 };
+            Heap heap = new Heap(newArr);
+            heap.build();
+            heap.sort();
+            heap.printArray();
         }
     }
 }
