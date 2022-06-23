@@ -8,5 +8,8 @@
   <ItemGroup>
     <Folder Include="HashTable\LinkedListWithKey\" />
     <Folder Include="Heap\" />
+    <Folder Include="SortingAlgorithms\" />
+    <Folder Include="Utils\" />
+    <Folder Include="SearchingAlgorithms\" />
   </ItemGroup>
 </Project>
