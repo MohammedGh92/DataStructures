@@ -8,17 +8,15 @@ namespace DataStructures.SortingAlgorithms
         public static int[] Sort(int[] arr)
         {
             //{ 10,80,30,90,40,50,70 }
-
             quickSort(arr, 0, arr.Length - 1);
-
             return arr;
         }
 
         private static void quickSort(int[] arr, int low, int high)
         {
+            Console.WriteLine("quickSort");
             if (low < high)
             {
-
                 int pi = partition(arr, low, high);
                 quickSort(arr, low, pi - 1);//O(Logn)
                 quickSort(arr, pi + 1, high);//O(Logn)

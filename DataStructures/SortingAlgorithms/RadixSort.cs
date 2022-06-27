@@ -36,7 +36,8 @@ namespace DataStructures.SortingAlgorithms
             }
             return arr;
         }
-
+        //0,10,40,70,80,90,100
+        
         private static int getDigit(int nu, int digitNu)
         {
             string nuStr = nu.ToString();
