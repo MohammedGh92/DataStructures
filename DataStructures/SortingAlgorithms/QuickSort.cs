@@ -28,12 +28,13 @@ namespace DataStructures.SortingAlgorithms
             int pivot = arr[high];
             int i = low - 1;
 
-            for (int j = low; j <= high - 1; j++)
+            for (int j = low; j < high; j++)
             {
                 if (arr[j] < pivot)
                 {
                     i++;
                     Swap.swap(ref arr, i, j);
+                    Print.PrintArr(arr);
                 }
             }
             Swap.swap(ref arr, i + 1, high);
