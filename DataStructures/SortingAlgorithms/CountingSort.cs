@@ -1,10 +1,10 @@
 ﻿using System;
 namespace DataStructures.SortingAlgorithms
 {
-    public class CountingSort
+    internal class CountingSort
     {
 
-        public static int[] Sort(int[] arr)
+        internal static int[] Sort(int[] arr)
         {
             int[] array = new int[10] { 2, 5, -4, 11, 0, 8, 22, 67, 51, 6 };
             int[] sortedArray = new int[array.Length];

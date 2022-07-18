@@ -1,9 +1,9 @@
 ﻿using System;
 namespace DataStructures.SortingAlgorithms
 {
-    public class InsertionSort
+    internal class InsertionSort
     {
-        public static int[] Sort(int[] arr)
+        internal static int[] Sort(int[] arr)
         {
             //{ 2, 8, 5, 3, 9, 4 }
             for (int i = 0; i < arr.Length - 1; i++)

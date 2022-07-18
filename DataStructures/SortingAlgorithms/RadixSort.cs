@@ -3,9 +3,9 @@ using DataStructures.Utils;
 
 namespace DataStructures.SortingAlgorithms
 {
-    public class RadixSort
+    internal class RadixSort
     {
-        public static int[] Sort(int[] arr)
+        internal static int[] Sort(int[] arr)
         {
             //{ 53, 89, 150, 36, 633, 233 }
             int MaxNu = getMax(arr);

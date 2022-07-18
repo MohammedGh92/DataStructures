@@ -11,5 +11,7 @@
     <Folder Include="SortingAlgorithms\" />
     <Folder Include="Utils\" />
     <Folder Include="SearchingAlgorithms\" />
+    <Folder Include="Graphs\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 </Project>

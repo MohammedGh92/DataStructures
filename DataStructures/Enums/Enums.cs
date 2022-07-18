@@ -1,7 +1,7 @@
 ﻿using System;
 namespace DataStructures
 {
-    public enum Traversing
+    internal enum Traversing
     {
         PreOrder,
         InOrder,

@@ -1,9 +1,9 @@
 ﻿using System;
 namespace DataStructures.SearchingAlgorithms
 {
-    public class BinarySearch
+    internal class BinarySearch
     {
-        public static int search(int[] arr, int Nu, bool returnExpectedPos=false)
+        internal static int search(int[] arr, int Nu, bool returnExpectedPos=false)
         {
             int left = 0;
             int right = arr.Length - 1;
@@ -25,7 +25,7 @@ namespace DataStructures.SearchingAlgorithms
                 return -1;//Not Found
         }
 
-        public static int search(char[] arr, char c)
+        internal static int search(char[] arr, char c)
         {
             int left = 0;
             int right = arr.Length - 1;

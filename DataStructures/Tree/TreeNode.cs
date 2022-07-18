@@ -1,20 +1,20 @@
 ﻿using System;
 namespace DataStructures.Tree
 {
-    public class TreeNode
+    internal class TreeNode
     {
-        public int val;
-        public TreeNode left, right;
-        public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
+        internal int val;
+        internal TreeNode left, right;
+        internal TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
         {
             this.val = val;
             this.left = left;
             this.right = right;
         }
 
-        public bool isLeaf() { return left == null && right == null; }
+        internal bool isLeaf() { return left == null && right == null; }
 
-        public void insert(int val)
+        internal void insert(int val)
         {
             if (this.val > val)
             {

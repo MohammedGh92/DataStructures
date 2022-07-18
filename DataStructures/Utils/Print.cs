@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace DataStructures.Utils
 {
-    public class Print
+    internal class Print
     {
-        public static void PrintArr(int[] arr)
+        internal static void PrintArr(int[] arr)
         {
             Console.WriteLine("======");
             for (int i = 0; i < arr.Length; i++)
@@ -16,7 +16,25 @@ namespace DataStructures.Utils
             Console.WriteLine("\n======");
         }
 
-        public static void PrintDict(dynamic dict)
+        internal static void PrintList(List<int> list)
+        {
+            Console.WriteLine("======");
+            for (int i = 0; i < list.Count; i++)
+                Console.WriteLine(list[i]);
+            Console.WriteLine("\n======");
+        }
+
+
+        internal static void Print2DArr(int[][] arr)
+        {
+            Console.WriteLine("======");
+            for (int i = 0; i < arr.Length; i++)
+                for (int y = 0; y < arr[i].Length; y++)
+                    Console.WriteLine(arr[i][y]);
+            Console.WriteLine("\n======");
+        }
+
+        internal static void PrintDict(dynamic dict)
         {
             Console.WriteLine("======");
             foreach (var item in dict)

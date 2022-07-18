@@ -1,12 +1,12 @@
 ﻿using System;
 namespace DataStructures
 {
-    public class NodeWithKey<T>
+    internal class NodeWithKey<T>
     {
-        public int key;
-        public T val;
-        public NodeWithKey<T> next;
-        public NodeWithKey(int key, T val)
+        internal int key;
+        internal T val;
+        internal NodeWithKey<T> next;
+        internal NodeWithKey(int key, T val)
         {
             this.key = key;
             this.val = val;

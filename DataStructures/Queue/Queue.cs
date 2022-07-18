@@ -3,38 +3,38 @@ using DataStructures.LinkedList;
 
 namespace DataStructures
 {
-    public class Queue<T>
+    internal class Queue<T>
     {
         private LinkedList<T> linkedList;
 
-        public Queue()
+        internal Queue()
         {
             linkedList = new LinkedList<T>();
         }
 
-        public void Enqueue(T val)
+        internal void Enqueue(T val)
         {
             linkedList.AddFirst(val);
         }
 
-        public T Dequeue()
+        internal T Dequeue()
         {
             if (Count() <= 0)
                 throw new NullReferenceException();
             return linkedList.Remove().val;
         }
 
-        public T Peek()
+        internal T Peek()
         {
             return linkedList.Peek().val;
         }
 
-        public int Count()
+        internal int Count()
         {
             return linkedList.Count();
         }
 
-        public void PrintAllData()
+        internal void PrintAllData()
         {
             linkedList.PrintAllNodes();
         }

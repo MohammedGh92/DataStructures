@@ -1,9 +1,9 @@
 ﻿using System;
 namespace DataStructures.SortingAlgorithms
 {
-    public class SelectionSort
+    internal class SelectionSort
     {
-        public static int[] Sort(int[] arr)
+        internal static int[] Sort(int[] arr)
         {
             //{ 2, 8, 5, 3, 9, 1, 1 }
 

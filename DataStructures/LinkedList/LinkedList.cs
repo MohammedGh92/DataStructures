@@ -1,13 +1,13 @@
 ﻿using System;
 namespace DataStructures.LinkedList
 {
-    public class LinkedList<T>
+    internal class LinkedList<T>
     {
-        public Node<T> head;
-        public Node<T> tail;
+        internal Node<T> head;
+        internal Node<T> tail;
         private int count;
 
-        public void AddFirst(T val)
+        internal void AddFirst(T val)
         {
             count++;
             Node<T> newNode = new Node<T>(val);
@@ -24,7 +24,7 @@ namespace DataStructures.LinkedList
             }
         }
 
-        public void Add(T val)
+        internal void Add(T val)
         {
             count++;
             Node<T> newNode = new Node<T>(val);
@@ -46,9 +46,9 @@ namespace DataStructures.LinkedList
             }
         }
 
-        public int Count() { return count; }
+        internal int Count() { return count; }
 
-        public Node<T> Remove()
+        internal Node<T> Remove()
         {
             if (head == null)
                 return null;
@@ -78,7 +78,7 @@ namespace DataStructures.LinkedList
             return removedNode;
         }
 
-        public Node<T> Peek()
+        internal Node<T> Peek()
         {
             if (head == null)
                 return null;
@@ -89,7 +89,7 @@ namespace DataStructures.LinkedList
             return cn;
         }
 
-        public void PrintAllNodes()
+        internal void PrintAllNodes()
         {
             if (head == null)
             {

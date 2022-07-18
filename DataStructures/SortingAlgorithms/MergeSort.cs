@@ -3,9 +3,9 @@ using DataStructures.Utils;
 
 namespace DataStructures.SortingAlgorithms
 {
-    public class MergeSort
+    internal class MergeSort
     {
-        public static int[] Sort(int[] arr)
+        internal static int[] Sort(int[] arr)
         {
             return mergeSort(arr);
         }

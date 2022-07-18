@@ -1,9 +1,9 @@
 ﻿using System;
 namespace DataStructures.SortingAlgorithms
 {
-    public class BubbleSort
+    internal class BubbleSort
     {
-        public static int[] Sort(int[] arr)
+        internal static int[] Sort(int[] arr)
         {
 
             for (int i = 0; i < arr.Length - 1; i++)

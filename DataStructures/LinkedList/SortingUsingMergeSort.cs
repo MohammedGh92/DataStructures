@@ -1,9 +1,9 @@
 ﻿using System;
 namespace DataStructures.LinkedList
 {
-    public class SortingUsingMergeSort
+    internal class SortingUsingMergeSort
     {
-        public static Node<int> getSorted(Node<int> head)
+        internal static Node<int> getSorted(Node<int> head)
         {
             if (head == null || head.next == null)
                 return head;

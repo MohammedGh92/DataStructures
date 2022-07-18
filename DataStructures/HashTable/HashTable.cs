@@ -3,12 +3,12 @@ using DataStructures.LinkedList;
 
 namespace DataStructures
 {
-    public class HashTable<T>
+    internal class HashTable<T>
     {
         private float loadFactor;
         private LinkedListWithKey<T>[] linkedListsArr;
         private int count;
-        public HashTable(int capacity, float loadFactor = 0.75f)
+        internal HashTable(int capacity, float loadFactor = 0.75f)
         {
             if (capacity < 0)
             {
@@ -27,7 +27,7 @@ namespace DataStructures
             return (float)((float)count / (float)linkedListsArr.Length);
         }
 
-        public void put(int key, T value)
+        internal void put(int key, T value)
         {
             int newIndx = getHashedIndx(key);
             if (linkedListsArr[newIndx].AddNode(new NodeWithKey<T>(key, value)))
@@ -57,13 +57,13 @@ namespace DataStructures
             linkedListsArr = newlinkedListsArr;
         }
 
-        public T get(int key)
+        internal T get(int key)
         {
             int newIndx = getHashedIndx(key);
             return linkedListsArr[newIndx].GetNode(key);
         }
 
-        public void delete(int key)
+        internal void delete(int key)
         {
             int newIndx = getHashedIndx(key);
             if (linkedListsArr[newIndx].Remove(key))

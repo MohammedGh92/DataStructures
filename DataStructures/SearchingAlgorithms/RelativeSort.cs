@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DataStructures.SearchingAlgorithms
 {
-    public class RelativeSort
+    internal class RelativeSort
     {
         private static int[] sortRelative(int[] arr1, int[] arr2)
         {

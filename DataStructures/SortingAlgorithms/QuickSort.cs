@@ -3,9 +3,9 @@ using DataStructures.Utils;
 
 namespace DataStructures.SortingAlgorithms
 {
-    public class QuickSort
+    internal class QuickSort
     {
-        public static int[] Sort(int[] arr)
+        internal static int[] Sort(int[] arr)
         {
             //{ 10,80,30,90,40,50,70 }
             quickSort(arr, 0, arr.Length - 1);

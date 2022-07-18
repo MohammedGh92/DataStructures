@@ -18,23 +18,23 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 
-public class Node
+internal class Node
 {
-    public int key;
-    public int val;
-    public Node next;
-    public Node(int key, int val)
+    internal int key;
+    internal int val;
+    internal Node next;
+    internal Node(int key, int val)
     {
         this.key = key;
         this.val = val;
     }
 }
 
-public class LinkedListO
+internal class LinkedListO
 {
-    public Node head;
+    internal Node head;
 
-    public bool AddNode(Node node)
+    internal bool AddNode(Node node)
     {
         if (head == null)
         {
@@ -60,7 +60,7 @@ public class LinkedListO
         return true;
     }
 
-    public bool Remove(int key)
+    internal bool Remove(int key)
     {
         if (head == null)
             return false;
@@ -82,7 +82,7 @@ public class LinkedListO
         return head == null;
     }
 
-    public int GetNode(int key)
+    internal int GetNode(int key)
     {
         Node cn = head;
         while (cn != null)
@@ -97,12 +97,12 @@ public class LinkedListO
 
 
 
-public class HashTable
+internal class HashTable
 {
     private float loadFactor;
     private LinkedListO[] linkedListsArr;
     private int count;
-    public HashTable(int capacity, float loadFactor = 0.75f)
+    internal HashTable(int capacity, float loadFactor = 0.75f)
     {
         linkedListsArr = new LinkedListO[capacity];
         count = 0;
@@ -116,7 +116,7 @@ public class HashTable
         return (float)((float)count / (float)linkedListsArr.Length);
     }
 
-    public void put(int key, int value)
+    internal void put(int key, int value)
     {
         int newIndx = getHashedIndx(key);
         if (linkedListsArr[newIndx].AddNode(new Node(key, value)))
@@ -146,13 +146,13 @@ public class HashTable
         linkedListsArr = newlinkedListsArr;
     }
 
-    public int get(int key)
+    internal int get(int key)
     {
         int newIndx = getHashedIndx(key);
         return linkedListsArr[newIndx].GetNode(key);
     }
 
-    public void delete(int key)
+    internal void delete(int key)
     {
         int newIndx = getHashedIndx(key);
         if (linkedListsArr[newIndx].Remove(key))
@@ -166,9 +166,9 @@ public class HashTable
 
 }
 
-public class Solution
+internal class Solution
 {
-    public static void Main()
+    internal static void Main()
     {
         HashTable hashtable = new HashTable(5);
         for (int i = 0; i < 3; i++)

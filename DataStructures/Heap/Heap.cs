@@ -1,17 +1,17 @@
 ﻿using System;
 namespace DataStructures
 {
-    public class Heap
+    internal class Heap
     {
 
         private int[] arr;
 
-        public Heap(int[] arr)
+        internal Heap(int[] arr)
         {
             this.arr = arr;
         }
 
-        public void build()
+        internal void build()
         {
             for (int i = arr.Length / 2 - 1; i >= 0; i--)
                 heapify(arr.Length, i);
@@ -35,7 +35,7 @@ namespace DataStructures
             }
         }
 
-        public void sort()
+        internal void sort()
         {
             for (int i = arr.Length - 1; i > 0; i--)
             {
@@ -46,7 +46,7 @@ namespace DataStructures
             }
         }
 
-        public void printArray()
+        internal void printArray()
         {
             for (int i = 0; i < arr.Length; i++)
                 Console.WriteLine(arr[i] + " ");

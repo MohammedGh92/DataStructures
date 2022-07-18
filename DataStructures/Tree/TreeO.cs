@@ -3,17 +3,17 @@ using DataStructures.Tree;
 
 namespace DataStructures
 {
-    public class TreeO
+    internal class TreeO
     {
-        public TreeNode root;
+        internal TreeNode root;
 
-        public void printAllData(Traversing traverseType = Traversing.InOrder)
+        internal void printAllData(Traversing traverseType = Traversing.InOrder)
         {
             Console.WriteLine(traverseType);
             traverseNodes(root, traverseType);
         }
 
-        public void Insert(int data)
+        internal void Insert(int data)
         {
             if (root == null)
                 root = new TreeNode(data);

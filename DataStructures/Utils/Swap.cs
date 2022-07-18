@@ -1,9 +1,9 @@
 ﻿using System;
 namespace DataStructures.Utils
 {
-    public class Swap
+    internal class Swap
     {
-        public static void swap(ref int[] arr, int indx1, int indx2)
+        internal static void swap(ref int[] arr, int indx1, int indx2)
         {
             int temp = arr[indx1];
             arr[indx1] = arr[indx2];

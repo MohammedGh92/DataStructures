@@ -1,9 +1,9 @@
 ﻿using System;
 namespace DataStructures.LinkedList
 {
-    public class MergeLinkedList
+    internal class MergeLinkedList
     {
-        public static Node<int> mergeTwoSortedLinkedLists(Node<int> l1n, Node<int> l2n)
+        internal static Node<int> mergeTwoSortedLinkedLists(Node<int> l1n, Node<int> l2n)
         {
 
             if (l1n == null && l2n == null)

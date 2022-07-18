@@ -3,40 +3,40 @@ using DataStructures.LinkedList;
 
 namespace DataStructures
 {
-    public class Stack<T>
+    internal class Stack<T>
     {
         private LinkedList<T> linkedList;
 
-        public Stack()
+        internal Stack()
         {
             linkedList = new LinkedList<T>();
         }
 
-        public void Push(T val)
+        internal void Push(T val)
         {
             linkedList.Add(val);
         }
 
-        public T Pop()
+        internal T Pop()
         {
             if (Count() <= 0)
                 throw new NullReferenceException();
             return linkedList.Remove().val;
         }
 
-        public T Peek()
+        internal T Peek()
         {
             if (Count() <= 0)
                 throw new NullReferenceException();
             return linkedList.Peek().val;
         }
 
-        public int Count()
+        internal int Count()
         {
             return linkedList.Count();
         }
 
-        public void PrintAllData()
+        internal void PrintAllData()
         {
             linkedList.PrintAllNodes();
         }

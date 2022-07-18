@@ -1,11 +1,11 @@
 ﻿using System;
 namespace DataStructures.LinkedList
 {
-    public class LinkedListWithKey<T>
+    internal class LinkedListWithKey<T>
     {
-        public NodeWithKey<T> head;
+        internal NodeWithKey<T> head;
 
-        public bool AddNode(NodeWithKey<T> node)
+        internal bool AddNode(NodeWithKey<T> node)
         {
             if (head == null)
             {
@@ -31,7 +31,7 @@ namespace DataStructures.LinkedList
             return true;
         }
 
-        public bool Remove(int key)
+        internal bool Remove(int key)
         {
             if (head == null)
                 return false;
@@ -53,7 +53,7 @@ namespace DataStructures.LinkedList
             return head == null;
         }
 
-        public T GetNode(int key)
+        internal T GetNode(int key)
         {
             NodeWithKey<T> cn = head;
             while (cn != null)
