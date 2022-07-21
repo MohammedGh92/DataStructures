@@ -1,7 +1,7 @@
 ﻿using System;
 namespace DataStructures.Tree
 {
-    internal class TreeNode
+    public class TreeNode
     {
         internal int val;
         internal TreeNode left, right;

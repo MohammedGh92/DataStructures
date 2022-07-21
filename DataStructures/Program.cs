@@ -9,8 +9,8 @@ namespace DataStructures
     {
         public static void Main(String[] args)
         {
-            ShortestPathinBinaryMatrix shortestPathinBinaryMatrix = new ShortestPathinBinaryMatrix();
-            Console.WriteLine("Sol:" + shortestPathinBinaryMatrix.ShortestPathBinaryMatrix());
+            DeepestLeavesSum2 deepestLeavesSum2 = new DeepestLeavesSum2();
+            Console.WriteLine("Sol:" + deepestLeavesSum2.DeepestLeavesSum());
         }
     }
 }

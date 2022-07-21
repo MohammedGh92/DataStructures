@@ -43,5 +43,15 @@ namespace DataStructures.Utils
             }
             Console.WriteLine("\n======");
         }
+
+        internal static void PrintHash(dynamic hash)
+        {
+            Console.WriteLine("======");
+            foreach (var item in hash)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("\n======");
+        }
     }
 }

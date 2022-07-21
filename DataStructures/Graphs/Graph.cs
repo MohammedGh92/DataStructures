@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace DataStructures
 {
     internal class Graph
@@ -141,5 +143,52 @@ namespace DataStructures
             Console.WriteLine("==============");
         }
 
+        internal void DFS(GraphNode[] nodes)
+        {
+            if (nodes == null)
+                return;
+            //1.create visited
+            HashSet<int> visited = new HashSet<int>();
+
+            //2.loop through all root nodes
+            //for (int i = 0; i < nodes.Length; i++)
+            //    DFSUtil(nodes[i], visited);
+        }
+
+        bool isFounded;
+        internal bool DFS(GraphNode[] nodes, int value)
+        {
+            if (nodes == null)
+                return false;
+            //1.create visited
+            HashSet<int> visited = new HashSet<int>();
+
+            //2.loop through all root nodes
+            for (int i = 0; i < nodes.Length; i++)
+            {
+                if (!isFounded)
+                    DFSUtil(nodes[i], visited, value);
+            }
+            return isFounded;
+        }
+
+        private void DFSUtil(GraphNode graphNode, HashSet<int> visited, int value)
+        {
+            //3.check visited
+            if (visited.Contains(graphNode.val))
+                return;
+            //4.check goal
+            visited.Add(graphNode.val);
+            if (graphNode.val == value)
+            {
+                isFounded = true;
+                return;
+            }
+            Console.WriteLine(graphNode.val);
+            //5.check naighbours
+            foreach (GraphNode node in graphNode.children)
+                DFSUtil(node, visited, value);
+
+        }
     }
 }
