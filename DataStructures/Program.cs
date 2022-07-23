@@ -1,7 +1,5 @@
-﻿
-using System;
-using DataStructures.Graphs;
-using DataStructures.Tree;
+﻿using System;
+using DataStructures.Graphs.TopSort;
 
 namespace DataStructures
 {
@@ -9,8 +7,8 @@ namespace DataStructures
     {
         public static void Main(String[] args)
         {
-            DeepestLeavesSum2 deepestLeavesSum2 = new DeepestLeavesSum2();
-            Console.WriteLine("Sol:" + deepestLeavesSum2.DeepestLeavesSum());
+            CourseScheduleII courseScheduleII = new CourseScheduleII();
+            courseScheduleII.solution();
         }
     }
 }

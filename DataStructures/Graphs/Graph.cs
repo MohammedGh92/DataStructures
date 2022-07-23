@@ -34,12 +34,12 @@ namespace DataStructures
         {
             nodes = new GraphNode[7];
             for (int i = 0; i < nodes.Length; i++)
-                nodes[i] = new GraphNode((dynamic)i);
+                nodes[i] = new GraphNode((dynamic)(i + 1));
 
             /*  
-             *      0
-             *     1 2
-             *   3 4 5 6
+             *      1
+             *     2 3
+             *   4 5 6 7
              */
             nodes[0].children = new GraphNode[2];
             nodes[1].children = new GraphNode[2];
@@ -51,8 +51,6 @@ namespace DataStructures
             nodes[1].children[1] = nodes[4];
             nodes[2].children[0] = nodes[5];
             nodes[2].children[1] = nodes[6];
-
-
         }
 
         internal void BFSSearchTwoQueues()
@@ -87,6 +85,40 @@ namespace DataStructures
             }
         }
 
+        internal void DFSSearchStack()
+        {
+            Stack<GraphNode> stack = new Stack<GraphNode>();
+            HashSet<int> visited = new HashSet<int>();
+            stack.Push(nodes[0]);
+            visited.Add(nodes[0].val);
+            GraphNode cn = nodes[0];
+            while (stack.Count() > 0)
+            {
+                if (cn.children != null)
+                {
+                    foreach (GraphNode node in cn.children)
+                    {
+                        if (!visited.Contains(node.val))
+                        {
+                            stack.Push(node);
+                            visited.Add(node.val);
+                        }
+                    }
+                    if (visited.Contains(cn.children[0].val))
+                    {
+                        Console.WriteLine("Cycle");
+                        return;
+                    }
+                    cn = cn.children[0];
+                }
+                else
+                {
+                    cn = stack.Pop();
+                    Console.WriteLine(cn.val);
+                }
+            }
+        }
+
         internal void printAllMainNodes()
         {
             Console.WriteLine("==============");
@@ -98,26 +130,32 @@ namespace DataStructures
         internal void DFS()
         {
             Console.WriteLine("==============");
+            HashSet<int> visited = new HashSet<int>();
             foreach (var node in nodes)
             {
-                if (!node.visited)
-                    DFSearch(node);
+                if (!visited.Contains(node.val))
+                    DFSearch(node, visited);
             }
             Console.WriteLine("==============");
         }
 
-        private void DFSearch(GraphNode node)
+        private void DFSearch(GraphNode node, HashSet<int> visited)
         {
             if (node == null)
                 return;
-            Console.WriteLine(node.val);
-            node.visited = true;
             if (node.children == null)
-                return;
-            foreach (var child in node.children)
+                Console.WriteLine(node.val);
+            else
             {
-                if (!child.visited)
-                    DFSearch(child);
+                foreach (var child in node.children)
+                {
+                    if (!visited.Contains(child.val))
+                    {
+                        visited.Add(child.val);
+                        DFSearch(child, visited);
+                    }
+                }
+                Console.WriteLine(node.val);
             }
         }
 
