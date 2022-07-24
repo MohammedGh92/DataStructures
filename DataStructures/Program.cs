@@ -8,8 +8,8 @@ namespace DataStructures
     {
         public static void Main(String[] args)
         {
-            MinimumNumberOfOperations minimumNumberOfOperations = new MinimumNumberOfOperations();
-            Console.WriteLine("Sol:" + minimumNumberOfOperations.solution());
+            AverageOfLevels averageOfLevels = new AverageOfLevels();
+            averageOfLevels.GetAverageOfLevels();
         }
     }
 }
