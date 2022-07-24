@@ -35,9 +35,9 @@ namespace DataStructures.Graphs.TopSort
                 if (!visited.Contains(i))//4.recursion
                 {
                     if (!dfsUtil(i, dict, visited, recHash))
-                        Console.WriteLine("Cycle");
+                        return false;
                 }
-            Console.WriteLine("No Cycle");
+            return true;
         }
 
         private bool dfsUtil(int key, Dictionary<int, List<int>> dict, HashSet<int> visited, HashSet<int> recHash)

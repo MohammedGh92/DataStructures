@@ -1,4 +1,5 @@
 ﻿using System;
+using DataStructures.Graphs;
 using DataStructures.Graphs.TopSort;
 
 namespace DataStructures
@@ -7,8 +8,8 @@ namespace DataStructures
     {
         public static void Main(String[] args)
         {
-            CourseScheduleII courseScheduleII = new CourseScheduleII();
-            courseScheduleII.solution();
+            MinimumNumberOfOperations minimumNumberOfOperations = new MinimumNumberOfOperations();
+            Console.WriteLine("Sol:" + minimumNumberOfOperations.solution());
         }
     }
 }
