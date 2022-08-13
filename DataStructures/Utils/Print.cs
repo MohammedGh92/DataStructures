@@ -34,6 +34,18 @@ namespace DataStructures.Utils
             Console.WriteLine("\n======");
         }
 
+        internal static void Print2DArr(int[,] arr, bool withPos)
+        {
+            Console.WriteLine("======");
+            for (int i = 0; i < arr.GetLength(0); i++)
+                for (int y = 0; y < arr.GetLength(1); y++)
+                    if (withPos)
+                        Console.WriteLine(i + "," + y + ":" + arr[i, y]);
+                    else
+                        Console.WriteLine(arr[i, y]);
+            Console.WriteLine("\n======");
+        }
+
         internal static void PrintDict(dynamic dict)
         {
             Console.WriteLine("======");

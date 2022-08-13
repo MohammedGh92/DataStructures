@@ -14,5 +14,10 @@
     <Folder Include="Graphs\" />
     <Folder Include="Enums\" />
     <Folder Include="Graphs\TopSort\" />
+    <Folder Include="DynamicProgramming\" />
+    <Folder Include="Recursion\" />
+    <Folder Include="Misc\" />
+    <Folder Include="Grokking\" />
+    <Folder Include="Grokking\P1-SlidingWindow\" />
   </ItemGroup>
 </Project>
