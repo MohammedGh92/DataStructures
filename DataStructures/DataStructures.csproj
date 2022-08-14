@@ -19,5 +19,6 @@
     <Folder Include="Misc\" />
     <Folder Include="Grokking\" />
     <Folder Include="Grokking\P1-SlidingWindow\" />
+    <Folder Include="Grokking\Two Pointers\" />
   </ItemGroup>
 </Project>

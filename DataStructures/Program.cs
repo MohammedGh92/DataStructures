@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using DataStructures.Grokking.P1SlidingWindow;
+using DataStructures.Grokking.TwoPointers;
 using DataStructures.Utils;
 
 namespace DataStructures
 {
     class Program
     {
-        public static void Main(String[] args)
+        public static void Main(string[] args)
         {
-            Words_Concatenation words_Concatenation = new Words_Concatenation();
-            Print.PrintList(words_Concatenation.findWordConcatenation());
+            Triplet_Sum_Close_to_Target triplet_Sum_Close_to_Target = new Triplet_Sum_Close_to_Target();
+            Console.WriteLine(triplet_Sum_Close_to_Target.searchTriplet());
         }
     }
 }
