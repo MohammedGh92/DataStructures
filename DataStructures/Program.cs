@@ -8,8 +8,8 @@ namespace DataStructures
     {
         public static void Main(string[] args)
         {
-            Triplet_Sum_Close_to_Target triplet_Sum_Close_to_Target = new Triplet_Sum_Close_to_Target();
-            Console.WriteLine(triplet_Sum_Close_to_Target.searchTriplet());
+            Quadruple_Sum_to_Target quadruple_Sum_to_Target = new Quadruple_Sum_to_Target();
+            quadruple_Sum_to_Target.searchQuadruplets();
         }
     }
 }
