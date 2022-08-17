@@ -1,6 +1,5 @@
 ﻿using System;
-using DataStructures.Grokking.TwoPointers;
-using DataStructures.Utils;
+using DataStructures.Grokking.P3MergeIntervals;
 
 namespace DataStructures
 {
@@ -8,8 +7,8 @@ namespace DataStructures
     {
         public static void Main(string[] args)
         {
-            Quadruple_Sum_to_Target quadruple_Sum_to_Target = new Quadruple_Sum_to_Target();
-            quadruple_Sum_to_Target.searchQuadruplets();
+            Employee_Free_Time employee_Free_Time = new Employee_Free_Time();
+            employee_Free_Time.findEmployeeFreeTime();
         }
     }
 }
