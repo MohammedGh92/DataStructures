@@ -1,5 +1,7 @@
 ﻿using System;
-using DataStructures.Grokking.P3MergeIntervals;
+using DataStructures.Grokking.CyclicSort;
+using DataStructures.Grokking.Kwaymerge;
+using DataStructures.Grokking.TopKElements;
 
 namespace DataStructures
 {
@@ -7,8 +9,8 @@ namespace DataStructures
     {
         public static void Main(string[] args)
         {
-            Employee_Free_Time employee_Free_Time = new Employee_Free_Time();
-            employee_Free_Time.findEmployeeFreeTime();
+            Find_the_First_K_Missing_Positive_Numbers find_the_First_K_Missing_Positive_Numbers = new Find_the_First_K_Missing_Positive_Numbers();
+            find_the_First_K_Missing_Positive_Numbers.findNumbers();
         }
     }
 }

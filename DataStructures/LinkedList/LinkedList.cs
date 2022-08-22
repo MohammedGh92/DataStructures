@@ -1,7 +1,7 @@
 ﻿using System;
 namespace DataStructures.LinkedList
 {
-    internal class LinkedList<T>
+    public class LinkedList<T>
     {
         internal Node<T> head;
         internal Node<T> tail;
