@@ -26,8 +26,6 @@
     <Folder Include="Grokking\Top %27K%27 Elements\Objects\" />
     <Folder Include="Grokking\K-way merge  \" />
     <Folder Include="Grokking\Cyclic Sort\" />
-    <Folder Include="Grokking\Subsets\" />
-    <Folder Include="Grokking\Modified Binary Search\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="OptimizedPriorityQueue" Version="5.1.0" />
