@@ -1,6 +1,6 @@
 ﻿using System;
-using DataStructures.Grokking.TwoPointers;
-using DataStructures.Utils;
+using System.Linq;
+using DataStructures.Grokking.ModifiedBinarySearch;
 
 namespace DataStructures
 {
@@ -8,8 +8,9 @@ namespace DataStructures
     {
         public static void Main(string[] args)
         {
-            Triplet_Sum_Close_to_Target triplet_Sum_Close_to_Target = new Triplet_Sum_Close_to_Target();
-            Console.WriteLine(triplet_Sum_Close_to_Target.searchTriplet());
+            Console.WriteLine(string.Join(Environment.NewLine, Enumerable.Repeat(string.Empty, 100)));
+            Rotation_Count rotation_Count = new Rotation_Count();
+            Console.WriteLine(rotation_Count.countRotations());
         }
     }
 }

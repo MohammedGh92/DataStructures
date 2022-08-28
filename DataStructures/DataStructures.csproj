@@ -18,7 +18,18 @@
     <Folder Include="Recursion\" />
     <Folder Include="Misc\" />
     <Folder Include="Grokking\" />
-    <Folder Include="Grokking\P1-SlidingWindow\" />
+    <Folder Include="Grokking\Sliding Window\" />
     <Folder Include="Grokking\Two Pointers\" />
+    <Folder Include="Grokking\Merge Intervals\" />
+    <Folder Include="Grokking\Merge Intervals\Objects\" />
+    <Folder Include="Grokking\Top %27K%27 Elements\" />
+    <Folder Include="Grokking\Top %27K%27 Elements\Objects\" />
+    <Folder Include="Grokking\K-way merge  \" />
+    <Folder Include="Grokking\Cyclic Sort\" />
+    <Folder Include="Grokking\Subsets\" />
+    <Folder Include="Grokking\Modified Binary Search\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="OptimizedPriorityQueue" Version="5.1.0" />
   </ItemGroup>
 </Project>

@@ -16,13 +16,27 @@ namespace DataStructures.Utils
             Console.WriteLine("\n======");
         }
 
-        internal static void PrintList(List<int> list)
+        internal static void PrintList(List<int> list, bool inOneLine = false)
         {
             Console.WriteLine("======");
-            for (int i = 0; i < list.Count; i++)
-                Console.WriteLine(list[i]);
+            if (list.Count == 0)
+            {
+                Console.WriteLine("Empty");
+                return;
+            }
+            if (inOneLine)
+            {
+                for (int i = 0; i < list.Count; i++)
+                    Console.Write(list[i]);
+            }
+            else
+            {
+                for (int i = 0; i < list.Count; i++)
+                    Console.WriteLine(list[i]);
+            }
             Console.WriteLine("\n======");
         }
+
 
 
         internal static void Print2DArr(int[][] arr)

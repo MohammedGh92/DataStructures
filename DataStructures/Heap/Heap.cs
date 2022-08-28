@@ -1,14 +1,15 @@
-using System;
+﻿using System;
+
 namespace DataStructures
 {
-    internal class Heap
+    public class Heap
     {
-
-        private int[] arr;
-
-        internal Heap(int[] arr)
+        protected int[] arr;
+        protected bool isMaxHeap;
+        public Heap(int[] arr, bool isMaxHeap)
         {
             this.arr = arr;
+            this.isMaxHeap = isMaxHeap;
         }
 
         internal void build()
@@ -19,21 +20,33 @@ namespace DataStructures
 
         private void heapify(int n, int i)
         {
-            int highestNode = i;
+            int nextNode = i;
             int leftChild = 2 * i + 1;
             int rightChild = 2 * i + 2;
-            if (leftChild < n && arr[leftChild] > arr[highestNode])
-                highestNode = leftChild;
-            if (rightChild < n && arr[rightChild] > arr[highestNode])
-                highestNode = rightChild;
-            if (highestNode != i)
+            if (isMaxHeap)
+            {
+                if (leftChild < n && arr[leftChild] > arr[nextNode])
+                    nextNode = leftChild;
+                if (rightChild < n && arr[rightChild] > arr[nextNode])
+                    nextNode = rightChild;
+            }
+            else
+            {
+                if (leftChild < n && arr[leftChild] < arr[nextNode])
+                    nextNode = leftChild;
+                if (rightChild < n && arr[rightChild] < arr[nextNode])
+                    nextNode = rightChild;
+            }
+            if (nextNode != i)
             {
                 int temp = arr[i];
-                arr[i] = arr[highestNode];
-                arr[highestNode] = temp;
-                heapify(n, highestNode);
+                arr[i] = arr[nextNode];
+                arr[nextNode] = temp;
+                heapify(n, nextNode);
             }
         }
+
+        internal int[] getSortedArr() { return arr; }
 
         internal void sort()
         {
@@ -51,6 +64,5 @@ namespace DataStructures
             for (int i = 0; i < arr.Length; i++)
                 Console.WriteLine(arr[i] + " ");
         }
-
     }
 }
