@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using DataStructures.Grokking.ModifiedBinarySearch;
+using DataStructures.LeetCode;
 
 namespace DataStructures
 {
@@ -9,8 +10,8 @@ namespace DataStructures
         public static void Main(string[] args)
         {
             Console.WriteLine(string.Join(Environment.NewLine, Enumerable.Repeat(string.Empty, 100)));
-            Rotation_Count rotation_Count = new Rotation_Count();
-            Console.WriteLine(rotation_Count.countRotations());
+            TwoSum twoSum = new TwoSum();
+            twoSum.TwoSums();
         }
     }
 }

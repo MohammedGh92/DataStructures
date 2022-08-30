@@ -28,6 +28,7 @@
     <Folder Include="Grokking\Cyclic Sort\" />
     <Folder Include="Grokking\Subsets\" />
     <Folder Include="Grokking\Modified Binary Search\" />
+    <Folder Include="LeetCode\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="OptimizedPriorityQueue" Version="5.1.0" />
