@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
-using DataStructures.Grokking.ModifiedBinarySearch;
-using DataStructures.LeetCode;
+using DataStructures.Grokking.PatternFastSlowpointers;
+using DataStructures.Test;
 
 namespace DataStructures
 {
@@ -10,8 +10,9 @@ namespace DataStructures
         public static void Main(string[] args)
         {
             Console.WriteLine(string.Join(Environment.NewLine, Enumerable.Repeat(string.Empty, 100)));
-            TwoSum twoSum = new TwoSum();
-            twoSum.TwoSums();
+            testQuestion test = new testQuestion();
+            for (int i = 0; i < test.list.Count; i++)
+                Console.WriteLine(test.AddCommand(test.list[i]));
         }
     }
 }
