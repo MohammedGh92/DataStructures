@@ -29,10 +29,13 @@
     <Folder Include="Grokking\Subsets\" />
     <Folder Include="Grokking\Modified Binary Search\" />
     <Folder Include="LeetCode\" />
-    <Folder Include="Grokking\Pattern: Fast &amp; Slow pointers\" />
     <Folder Include="Test\" />
+    <Folder Include="Grokking\TwoHeaps\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="OptimizedPriorityQueue" Version="5.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Grokking\TwoHeaps\" />
   </ItemGroup>
 </Project>

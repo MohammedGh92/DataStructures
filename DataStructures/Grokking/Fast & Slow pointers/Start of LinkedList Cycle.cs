@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using DataStructures.LinkedList;
 
 namespace DataStructures.Grokking.PatternFastSlowpointers
 {
     public class Start_of_LinkedList_Cycle
     {
-        Node<int> n1;
+        ListNode n1;
         public Start_of_LinkedList_Cycle()
         {
-            n1 = new Node<int>(1);
-            Node<int> n2 = new Node<int>(2);
-            Node<int> n3 = new Node<int>(3);
-            Node<int> n4 = new Node<int>(4);
-            Node<int> n5 = new Node<int>(5);
-            Node<int> n6 = new Node<int>(6);
+            n1 = new ListNode(1);
+            ListNode n2 = new ListNode(2);
+            ListNode n3 = new ListNode(3);
+            ListNode n4 = new ListNode(4);
+            ListNode n5 = new ListNode(5);
+            ListNode n6 = new ListNode(6);
             n1.next = n2;
             n2.next = n3;
             n3.next = n4;
@@ -22,11 +23,11 @@ namespace DataStructures.Grokking.PatternFastSlowpointers
             n6.next = n3;
         }
 
-        public Node<int> startOfLinkedList()
+        public ListNode startOfLinkedList()
         {
 
-            Node<int> sp = n1;
-            Node<int> fp = n1.next;
+            ListNode sp = n1;
+            ListNode fp = n1.next;
 
             //1.find cycle
             while (fp != null && fp.next != null)
@@ -42,7 +43,7 @@ namespace DataStructures.Grokking.PatternFastSlowpointers
 
             //2.get length of the cycle
 
-            Node<int> slowSavedP = new Node<int>(0);
+            ListNode slowSavedP = new ListNode(0);
             slowSavedP.next = sp;
             sp = sp.next;
             int counter = 0;
@@ -68,12 +69,12 @@ namespace DataStructures.Grokking.PatternFastSlowpointers
             return sp;
         }
 
-        public Node<int> startOfLinkedListUsingHash()
+        public ListNode startOfLinkedListUsingHash()
         {
 
-            HashSet<Node<int>> hash = new HashSet<Node<int>>();
+            HashSet<ListNode> hash = new HashSet<ListNode>();
 
-            Node<int> cp = n1;
+            ListNode cp = n1;
 
             while (cp != null)
             {
@@ -84,7 +85,7 @@ namespace DataStructures.Grokking.PatternFastSlowpointers
                 cp = cp.next;
             }
 
-            return new Node<int>(0);
+            return new ListNode(0);
         }
     }
 }

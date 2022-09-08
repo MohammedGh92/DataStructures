@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DataStructures.LinkedList;
 
 namespace DataStructures.Utils
 {
@@ -76,6 +77,17 @@ namespace DataStructures.Utils
             foreach (var item in hash)
             {
                 Console.WriteLine(item);
+            }
+            Console.WriteLine("\n======");
+        }
+
+        internal static void printLinkedList(ListNode n1)
+        {
+            Console.WriteLine("======");
+            while (n1 != null)
+            {
+                Console.Write(n1.val);
+                n1 = n1.next;
             }
             Console.WriteLine("\n======");
         }

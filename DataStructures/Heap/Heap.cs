@@ -1,21 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DataStructures
 {
     public class Heap
     {
-        protected int[] arr;
-        protected bool isMaxHeap;
-        public Heap(int[] arr, bool isMaxHeap)
+        protected List<int> arr;
+        protected bool isMinHeap;
+        public Heap(List<int> arr, bool isMinHeap)
         {
             this.arr = arr;
-            this.isMaxHeap = isMaxHeap;
+            this.isMinHeap = isMinHeap;
         }
 
         internal void build()
         {
-            for (int i = arr.Length / 2 - 1; i >= 0; i--)
-                heapify(arr.Length, i);
+            for (int i = arr.Count / 2 - 1; i >= 0; i--)
+                heapify(arr.Count, i);
         }
 
         private void heapify(int n, int i)
@@ -23,7 +24,7 @@ namespace DataStructures
             int nextNode = i;
             int leftChild = 2 * i + 1;
             int rightChild = 2 * i + 2;
-            if (isMaxHeap)
+            if (isMinHeap)
             {
                 if (leftChild < n && arr[leftChild] > arr[nextNode])
                     nextNode = leftChild;
@@ -46,11 +47,11 @@ namespace DataStructures
             }
         }
 
-        internal int[] getSortedArr() { return arr; }
+        internal List<int> getSortedArr() { return arr; }
 
         internal void sort()
         {
-            for (int i = arr.Length - 1; i > 0; i--)
+            for (int i = arr.Count - 1; i > 0; i--)
             {
                 int temp = arr[0];
                 arr[0] = arr[i];
@@ -59,10 +60,24 @@ namespace DataStructures
             }
         }
 
+        public void insert(int num)
+        {
+            arr.Add(num);
+            build();
+            sort();
+        }
+
         internal void printArray()
         {
-            for (int i = 0; i < arr.Length; i++)
-                Console.WriteLine(arr[i] + " ");
+            Console.WriteLine("\n======");
+            for (int i = 0; i < arr.Count; i++)
+                Console.Write(arr[i]);
+            Console.WriteLine("\n======");
+        }
+
+        public int peek()
+        {
+            return arr[0];
         }
     }
 }

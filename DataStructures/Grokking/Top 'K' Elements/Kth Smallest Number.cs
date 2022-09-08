@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DataStructures.Grokking.TopKElements
 {
@@ -33,7 +34,7 @@ namespace DataStructures.Grokking.TopKElements
         {
             List<int> res = new List<int>();
 
-            Heap minHeap = new Heap(arr, true);
+            Heap minHeap = new Heap(arr.ToList(), true);
             minHeap.build();
             for (int i = 0; i < K; i++)
                 res.Add(minHeap.getSortedArr()[i]);

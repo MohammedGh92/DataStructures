@@ -1,17 +1,19 @@
 ﻿using System;
+using DataStructures.LinkedList;
+
 namespace DataStructures.Grokking.PatternFastSlowpointers
 {
     public class Middle_of_the_LinkedList
     {
-        Node<int> n1;
+        ListNode n1;
         public Middle_of_the_LinkedList()
         {
-            n1 = new Node<int>(1);
-            Node<int> n2 = new Node<int>(2);
-            Node<int> n3 = new Node<int>(3);
-            Node<int> n4 = new Node<int>(4);
-            Node<int> n5 = new Node<int>(5);
-            Node<int> n6 = new Node<int>(6);
+            n1 = new ListNode(1);
+            ListNode n2 = new ListNode(2);
+            ListNode n3 = new ListNode(3);
+            ListNode n4 = new ListNode(4);
+            ListNode n5 = new ListNode(5);
+            ListNode n6 = new ListNode(6);
             n1.next = n2;
             n2.next = n3;
             n3.next = n4;
@@ -19,11 +21,11 @@ namespace DataStructures.Grokking.PatternFastSlowpointers
             n5.next = n6;
         }
 
-        public Node<int> getMid()
+        public ListNode getMid()
         {
 
-            Node<int> sp = n1;
-            Node<int> fp = n1.next;
+            ListNode sp = n1;
+            ListNode fp = n1.next;
 
             while (fp != null && fp.next != null)
             {
