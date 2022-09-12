@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using DataStructures.LinkedList;
+using DataStructures.List;
 
 namespace DataStructures.Utils
 {
@@ -38,7 +38,26 @@ namespace DataStructures.Utils
             Console.WriteLine("\n======");
         }
 
-
+        internal static void PrintList(List<float> list, bool inOneLine = false)
+        {
+            Console.WriteLine("======");
+            if (list.Count == 0)
+            {
+                Console.WriteLine("Empty");
+                return;
+            }
+            if (inOneLine)
+            {
+                for (int i = 0; i < list.Count; i++)
+                    Console.Write(list[i]);
+            }
+            else
+            {
+                for (int i = 0; i < list.Count; i++)
+                    Console.WriteLine(list[i]);
+            }
+            Console.WriteLine("\n======");
+        }
 
         internal static void Print2DArr(int[][] arr)
         {

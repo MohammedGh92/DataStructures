@@ -31,11 +31,15 @@
     <Folder Include="LeetCode\" />
     <Folder Include="Test\" />
     <Folder Include="Grokking\TwoHeaps\" />
+    <Folder Include="Grokking\BFS\" />
+    <Folder Include="Grokking\DFS\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="OptimizedPriorityQueue" Version="5.1.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Grokking\TwoHeaps\" />
+    <None Remove="Grokking\BFS\" />
+    <None Remove="Grokking\DFS\" />
   </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@ namespace DataStructures.Tree
     public class TreeNode
     {
         internal int val;
-        internal TreeNode left, right;
+        internal TreeNode left, right,next;
         internal TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
         {
             this.val = val;

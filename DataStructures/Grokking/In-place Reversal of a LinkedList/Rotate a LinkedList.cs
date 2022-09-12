@@ -1,5 +1,5 @@
 ﻿using System;
-using DataStructures.LinkedList;
+using DataStructures.List;
 using DataStructures.Utils;
 
 namespace DataStructures.Grokking.PatternInplaceReversalofaLinkedList

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using DataStructures.LinkedList;
+using DataStructures.List;
 
 namespace DataStructures.Grokking.PatternFastSlowpointers
 {

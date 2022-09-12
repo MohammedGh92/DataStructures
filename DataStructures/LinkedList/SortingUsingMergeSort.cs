@@ -1,5 +1,5 @@
 ﻿using System;
-namespace DataStructures.LinkedList
+namespace DataStructures.List
 {
     internal class SortingUsingMergeSort
     {
