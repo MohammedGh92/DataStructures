@@ -28,24 +28,17 @@ namespace DataStructures.Graphs
             for (int i = 0; i < graph.nodes.Length; i++)
                 if (!visited.Contains(i))//4.recursion
                     topologicalSortUtil(graph.nodes[i], visited, stack);
-
-
-
             //7.poping stack
             while (stack.Count() > 0)
-            {
                 Console.WriteLine(stack.Pop());
-            }
         }
 
         private void topologicalSortUtil(GraphNode node, HashSet<int> visited, Stack<int> stack)
         {
             visited.Add(node.val);
-            if (node.children != null)//5.check naighbours
+            if (node.children != null)//5.check children
                 foreach (GraphNode child in node.children)
-                {
                     topologicalSortUtil(child, visited, stack);
-                }
             //6.push stack
             stack.Push(node.val);
         }

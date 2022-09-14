@@ -35,14 +35,11 @@ namespace DataStructures.Grokking.DFS
 
         private int countPaths(TreeNode n1, List<int> list, int S)
         {
-
             if (n1 == null)
                 return 0;
-
             list.Add(n1.val);
             int pathCount = 0;
             int pathSum = 0;
-
             for (int i = list.Count - 1; i >= 0; i--)
             {
                 pathSum += list[i];
@@ -52,11 +49,9 @@ namespace DataStructures.Grokking.DFS
                     pathCount++;
                 }
             }
-
             pathCount += countPaths(n1.left, list, S);
             pathCount += countPaths(n1.right, list, S);
             list.RemoveAt(list.Count - 1);
-
             return pathCount;
         }
     }

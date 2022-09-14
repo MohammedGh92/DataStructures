@@ -7,7 +7,6 @@ namespace DataStructures.Graphs.TopSort
     {
         int n;
         int[][] prerequisites;
-
         public CourseScheduleI()
         {
             n = 2;
