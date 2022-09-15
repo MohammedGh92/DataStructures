@@ -9,6 +9,7 @@ using DataStructures.Grokking.P3MergeIntervals;
 using DataStructures.Grokking.PatternInplaceReversalofaLinkedList;
 using DataStructures.Grokking.TopologicalSort;
 using DataStructures.Grokking.TwoHeaps;
+using DataStructures.LeetCode;
 using DataStructures.Test;
 using DataStructures.Utils;
 
@@ -19,8 +20,8 @@ namespace DataStructures
         public static void Main(string[] args)
         {
             Console.WriteLine(string.Join(Environment.NewLine, Enumerable.Repeat(string.Empty, 100)));
-            Tasks_Scheduling_Order tasks_Scheduling_Order = new Tasks_Scheduling_Order();
-            Print.PrintList(tasks_Scheduling_Order.isSchedulingPossible());
+            Task_Description task_Description = new Task_Description();
+            Console.WriteLine(task_Description.findWord());
         }
     }
 }
