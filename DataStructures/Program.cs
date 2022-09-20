@@ -20,8 +20,8 @@ namespace DataStructures
         public static void Main(string[] args)
         {
             Console.WriteLine(string.Join(Environment.NewLine, Enumerable.Repeat(string.Empty, 100)));
-            Task_Description task_Description = new Task_Description();
-            Console.WriteLine(task_Description.findWord());
+            Tasks_Scheduling tasks_Scheduling = new Tasks_Scheduling();
+            Console.WriteLine("isSchedulingPossible:" + tasks_Scheduling.isSchedulingPossible());
         }
     }
 }
