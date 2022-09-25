@@ -49,17 +49,17 @@ namespace DataStructures.Grokking.BFS
             while (queue.Count() > 0)
             {
                 int levelSize = queue.Count();
-                List<int> cList = new List<int>(levelSize);
+                List<int> cLevelList = new List<int>(levelSize);
                 for (int i = 0; i < levelSize; i++)
                 {
                     TreeNode cNode = queue.Dequeue();
-                    cList.Add(cNode.val);
+                    cLevelList.Add(cNode.val);
                     if (cNode.left != null)
                         queue.Enqueue(cNode.left);
                     if (cNode.right != null)
                         queue.Enqueue(cNode.right);
                 }
-                lists.Add(cList);
+                lists.Add(cLevelList);
             }
 
             for (int i = 0; i < lists.Count; i++)

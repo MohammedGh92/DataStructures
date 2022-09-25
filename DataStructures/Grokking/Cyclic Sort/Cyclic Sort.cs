@@ -13,23 +13,16 @@ namespace DataStructures.Grokking.CyclicSort
 
         public void Sort()
         {
-
             int cp = 0;
-
             while (cp < arr.Length)
             {
-
                 int cn = arr[cp];
-
                 if (cn == cp + 1)
                     cp++;
                 else
                     Swap(arr, cp, cn - 1);
-
             }
-
             Print.PrintArr(arr);
-
         }
 
         public void Swap(int[] arr, int i, int j)
