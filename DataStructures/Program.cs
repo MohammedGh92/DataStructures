@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
+using System;
 using System.Linq;
-using System.Reflection.Emit;
-using DataStructures.Graphs;
-using DataStructures.Grokking.BFS;
-using DataStructures.Grokking.DFS;
-using DataStructures.Grokking.P3MergeIntervals;
-using DataStructures.Grokking.PatternInplaceReversalofaLinkedList;
-using DataStructures.Grokking.SlidingWindow;
-using DataStructures.Grokking.TopologicalSort;
-using DataStructures.Grokking.TwoHeaps;
-using DataStructures.LeetCode;
-using DataStructures.Test;
-using DataStructures.Utils;
+using DataStructures.LeetCode.TopInterviewQuestions;
 
 namespace DataStructures
 {
@@ -21,8 +10,8 @@ namespace DataStructures
         public static void Main(string[] args)
         {
             Console.WriteLine(string.Join(Environment.NewLine, Enumerable.Repeat(string.Empty, 100)));
-            Maximum_Sum_Subarray_of_Size_K maximum_Sum_Subarray_Of_Size_K = new Maximum_Sum_Subarray_of_Size_K();
-            Console.WriteLine(maximum_Sum_Subarray_Of_Size_K.findMaxSumSubArray());
+            Remove_Duplicates_from_Sorted_Array remove_Duplicates_From_Sorted_Array = new Remove_Duplicates_from_Sorted_Array();
+            remove_Duplicates_From_Sorted_Array.RemoveDuplicates();
         }
     }
 }

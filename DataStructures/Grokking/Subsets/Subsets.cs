@@ -15,11 +15,8 @@ namespace DataStructures.Grokking.Subsets
 
         public List<List<int>> findSubsets()
         {
-
-            Console.WriteLine("----6-----");
             List<List<int>> result = new List<List<int>>();
             result.Add(new List<int>());
-
             for (int i = 0; i < nums.Length; i++)
             {
                 int currentCount = result.Count;

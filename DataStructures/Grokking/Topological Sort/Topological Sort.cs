@@ -30,7 +30,7 @@ namespace DataStructures.Grokking.TopologicalSort
                     topologicalSortUtil(graph.nodes[i], stack, visited);
             }
             //7.pop from stack
-            while (stack.Count()>0)
+            while (stack.Count() > 0)
                 Console.WriteLine(stack.Pop().val);
         }
 

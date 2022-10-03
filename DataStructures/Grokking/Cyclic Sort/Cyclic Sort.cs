@@ -10,7 +10,7 @@ namespace DataStructures.Grokking.CyclicSort
         {
             arr = new int[] { 3, 1, 5, 4, 2 };
         }
-
+        
         public void Sort()
         {
             int cp = 0;

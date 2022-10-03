@@ -34,6 +34,7 @@
     <Folder Include="Grokking\BFS\" />
     <Folder Include="Grokking\DFS\" />
     <Folder Include="Grokking\Topological Sort\" />
+    <Folder Include="LeetCode\Top Interview Questions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="OptimizedPriorityQueue" Version="5.1.0" />
@@ -43,5 +44,6 @@
     <None Remove="Grokking\BFS\" />
     <None Remove="Grokking\DFS\" />
     <None Remove="Grokking\Topological Sort\" />
+    <None Remove="LeetCode\Top Interview Questions\" />
   </ItemGroup>
 </Project>
