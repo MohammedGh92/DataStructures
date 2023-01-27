@@ -14,7 +14,6 @@ namespace DataStructures.Grokking.P3MergeIntervals
             intervals.Add(new Interval(1, 5));
             intervals.Add(new Interval(1, 9));
             intervals.Add(new Interval(10, 12));
-
         }
 
         public List<Interval> merge()

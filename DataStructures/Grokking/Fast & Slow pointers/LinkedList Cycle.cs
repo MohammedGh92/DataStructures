@@ -26,15 +26,14 @@ namespace DataStructures.Grokking.PatternFastSlowpointers
         public bool haveACylce()
         {
             ListNode slow = n1;
-            ListNode fast = slow.next;
-            while (fast != null && fast.next != null)
+            ListNode fast = n1;
+            while (fast.next != null && fast.next.next != null)
             {
-                if (slow == fast)
-                    return true;
                 slow = slow.next;
                 fast = fast.next.next;
+                if (slow.val == fast.val)
+                    return true;
             }
-
             return false;
         }
 

@@ -10,8 +10,8 @@ namespace DataStructures.Grokking.Subsets
         int[] nums;
         public Subsets_With_Duplicates()
         {
-            //nums = new int[] { 1, 5, 3, 3 };
-            nums = new int[] { 1, 1 };
+            nums = new int[] { 1, 5, 3, 3 };
+            //nums = new int[] { 1, 3, 3 };
         }
 
         public List<List<int>> findSubsets()
@@ -26,7 +26,7 @@ namespace DataStructures.Grokking.Subsets
                 int cn = nums[i];
                 int cs = resList.Count;
                 if (i > 0 && cn == nums[i - 1])//if duplicate
-                    startIndx = endIndex + 1;
+                    startIndx = resList.Count - 2;
                 endIndex = cs - 1;
                 for (int y = startIndx; y <= endIndex; y++)
                 {

@@ -24,6 +24,13 @@ namespace DataStructures.Grokking.BFS
             n2.right = n5;
             n3.left = n6;
             n3.right = n7;
+            /*
+             *              1
+             *              
+             *       2            3   
+             *       
+             *     4    5       6   7
+             */
         }
 
         public void LevelOrderTraversal()
@@ -67,4 +74,3 @@ namespace DataStructures.Grokking.BFS
         }
     }
 }
-

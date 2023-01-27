@@ -8,6 +8,11 @@ namespace DataStructures.Utils
     {
         internal static void PrintArr(int[] arr)
         {
+            PrintArr<int>(arr);
+        }
+
+        internal static void PrintArr<T>(T[] arr)
+        {
             Console.WriteLine("======");
             for (int i = 0; i < arr.Length; i++)
                 if (i == arr.Length - 1)
@@ -19,26 +24,10 @@ namespace DataStructures.Utils
 
         internal static void PrintList(List<int> list, bool inOneLine = false)
         {
-            Console.WriteLine("======");
-            if (list.Count == 0)
-            {
-                Console.WriteLine("Empty");
-                return;
-            }
-            if (inOneLine)
-            {
-                for (int i = 0; i < list.Count; i++)
-                    Console.Write(list[i]);
-            }
-            else
-            {
-                for (int i = 0; i < list.Count; i++)
-                    Console.WriteLine(list[i]);
-            }
-            Console.WriteLine("\n======");
+            PrintList<int>(list, inOneLine);
         }
 
-        internal static void PrintList(List<float> list, bool inOneLine = false)
+        internal static void PrintList<T>(List<T> list, bool inOneLine = false)
         {
             Console.WriteLine("======");
             if (list.Count == 0)

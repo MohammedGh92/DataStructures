@@ -39,8 +39,6 @@ namespace DataStructures.Grokking.P1SlidingWindow
                         matched++;
                 }
 
-
-
                 if (matched == patternDict.Count)
                     return true;
 

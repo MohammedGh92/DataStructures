@@ -17,21 +17,14 @@ namespace DataStructures.Grokking.TopKElements
         public List<int> findTopKFrequentNumbers()
         {
             List<int> resList = new List<int>();
-
             Dictionary<int, int> dict = new Dictionary<int, int>();
-
             for (int i = 0; i < arr.Length; i++)
             {
-
                 if (!dict.ContainsKey(arr[i]))
                     dict.Add(arr[i], 0);
                 dict[arr[i]]++;
-
             }
-
-
             dict = dict.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
-
             int counter = 0;
             foreach (var item in dict)
             {
@@ -40,7 +33,6 @@ namespace DataStructures.Grokking.TopKElements
                 if (counter == k)
                     break;
             }
-
             return resList;
         }
     }

@@ -1,17 +1,20 @@
 ﻿
 using System;
 using System.Linq;
+using DataStructures.Grokking.P1SlidingWindow;
 using DataStructures.LeetCode.TopInterviewQuestions;
+using DataStructures.Test;
+using DataStructures.Tree;
 
 namespace DataStructures
 {
     class Program
     {
+        
         public static void Main(string[] args)
         {
-            Console.WriteLine(string.Join(Environment.NewLine, Enumerable.Repeat(string.Empty, 100)));
-            Remove_Duplicates_from_Sorted_Array remove_Duplicates_From_Sorted_Array = new Remove_Duplicates_from_Sorted_Array();
-            remove_Duplicates_From_Sorted_Array.RemoveDuplicates();
+            testQuestion testQuestion = new testQuestion();
+            testQuestion.Solution();
         }
     }
 }
